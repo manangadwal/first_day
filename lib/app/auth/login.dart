@@ -1,6 +1,4 @@
-import 'package:first_day/pages/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -67,6 +65,8 @@ class _LoginPageState extends State<LoginPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           TextFormField(
+                            autovalidateMode:
+                                AutovalidateMode.onUserInteraction,
                             decoration: InputDecoration(
                                 labelText: "Username",
                                 hintText: " Enter username",
@@ -86,6 +86,8 @@ class _LoginPageState extends State<LoginPage> {
                             height: 20,
                           ),
                           TextFormField(
+                            autovalidateMode:
+                                AutovalidateMode.onUserInteraction,
                             obscureText: true,
                             decoration: InputDecoration(
                                 labelText: "Password",

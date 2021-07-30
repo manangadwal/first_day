@@ -1,34 +1,26 @@
-import 'package:first_day/pages/homepage.dart';
-import 'package:first_day/pages/login.dart';
-import 'package:first_day/pages/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'app/auth/login.dart';
+import 'app/screens/Home/homepage.dart';
+import 'core/routes.dart';
+import 'core/theme/app_theme.dart';
+
 void main() {
-  runApp(myApp());
+  runApp(MyApp());
 }
 
-class myApp extends StatelessWidget {
-  const myApp({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // home: Homepage(),
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        // primaryColor: Color(9),
-        primarySwatch: Colors.purple,
-        fontFamily: GoogleFonts.varela().fontFamily,
-      ),
-      themeMode: ThemeMode.light,
-      darkTheme: ThemeData(brightness: Brightness.dark),
-
-      initialRoute: "/login",
-      routes: {
-        MyRoutes.homeRoute: (context) => Homepage(),
-        MyRoutes.loginRoute: (context) => LoginPage(),
-      },
-    );
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme().lightTheme,
+        darkTheme: AppTheme().darkTheme,
+        themeMode: ThemeMode.light,
+        initialRoute: MyRoutes.homeRoute,
+        routes: routes);
   }
 }
