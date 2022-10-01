@@ -20,7 +20,13 @@ class Homepage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Text("Fuck you"),
+            Text("First Day"),
+            Container(
+              height :100,
+              width:100,
+              child:
+            Image.network(
+    'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif')),
           ],
         ),
       ),
